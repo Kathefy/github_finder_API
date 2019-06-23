@@ -2,7 +2,7 @@ class UI {
   constructor() {
     this.profile = document.getElementById('profile');
   }
-
+  // show profile
   showProfile(user) {
     this.profile.innerHTML = `
             <div class="card card-body mb-3">
@@ -48,7 +48,7 @@ class UI {
             <div id="repos"></div>
         `;
   }
-
+  // show repos
   showRepos(repos) {
     let output = '';
     repos.forEach(function(repo) {
@@ -76,7 +76,7 @@ class UI {
 
     document.getElementById('repos').innerHTML = output;
   }
-
+  //show alert
   showAlert(message, className) {
     this.clearAlert();
 
@@ -91,14 +91,14 @@ class UI {
       this.clearAlert();
     }, 3000);
   }
-
+  // clear alert
   clearAlert() {
     const currentAlert = document.querySelector('.alert');
     if (currentAlert) {
       currentAlert.remove();
     }
   }
-
+  // clear profile container
   clearProfile() {
     this.profile.innerHTML = '';
   }

@@ -16,6 +16,7 @@ class GitHub {
     const profile = await profileResponse.json();
 
     const repos = await reposResponse.json();
+    // Return object with profile and repos data
     return {
       profile,
       repos
